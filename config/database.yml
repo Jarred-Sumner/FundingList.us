@@ -21,6 +21,6 @@ test:
 production:
   adapter: postgresql
   database: fundinglist
-  username: postgres
+  user: postgres
   pool: 5
   timeout: 5000
