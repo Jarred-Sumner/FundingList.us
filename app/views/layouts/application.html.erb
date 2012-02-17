@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class='navbar'>
+      <div class='navbar-inner'>
+        <div class='container container-fluid'>
+          <a href="/" class='brand' id="title">FundingList</a>
+          <ul class="nav">
+            <li class="active">
+              <a href="#">Companies</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class='container' data-pjax-container>
+        <div class='alert alert-success hidden unselectable' id='success_alert'>
+          <div id='success_alert_text'></div>
+          <a class="close">&times;</a><%= flash[:notice] %></div>
+      <%= yield %>
+    </div>
+    <div id="not_affiliated">Companies, rounds, and related persons are retrieved from SEC filings. This website is not affiliated with the SEC in any other way.</div>
+
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<h2 class='personal_information_title'>Personal Information</h2>
+<table class='table table-bordered'>
+    <thead>
+      <tr>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>Street Address #1</td>
+        <td>Street Address #2</td>
+        <td>City</td>
+        <td>Zip Code</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= @person.first_name %></td>
+        <td><%= @person.last_name %></td>
+        <td><%= @person.street_address_one %></td>
+        <td><%= @person.street_address_two %></td>
+        <td><%= @person.city %></td>
+        <td><%= @person.zip_code %></td>
+      </tr>
+    </tbody>
+  </table>

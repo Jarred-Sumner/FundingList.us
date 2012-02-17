@@ -1,0 +1,10 @@
+<% unless @related_person.companies.empty? %>
+  <div id='related_companies'>
+    <h2>Related Companies:</h2>
+    <ul id='related_companies_list'>
+      <% @related_person.companies.each do |company| %>
+        <li><a href='/companies/<%= company.id %>'><%= company.name %> - <%= @related_person.title %></a></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

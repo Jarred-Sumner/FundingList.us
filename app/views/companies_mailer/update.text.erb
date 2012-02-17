@@ -1,0 +1,13 @@
+Hey!
+
+<%= @round.company.name %> has gotten more funding, to the tune of <%= number_to_currency @round.raised %>.
+
+If you want to know more head over to http://fundinglist.us/rounds/<%= @round.id %>.
+
+
+Thanks!
+FundingList
+
+
+If you don't want to get any more emails from us just go to http://fundinglist.us/unsubscribe?&email=<%= @recepient.email %>
+

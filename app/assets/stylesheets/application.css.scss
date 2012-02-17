@@ -1,0 +1,38 @@
+/*
+ *= require_self
+ *= require jquery-ui-1.8.17.custom
+*/
+@import "bourbon";
+@import "bootstrap";
+@import 'responsive';
+@import url(http://fonts.googleapis.com/css?family=Asap|Oswald);
+
+#not_affiliated
+{
+  text-align: center;  
+}
+.hidden
+{
+  display: none;
+}
+#success_alert
+{
+  margin: 0 auto;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 18pt;
+  #success_alert_text, .close
+  {
+    display: inline-block;
+  }
+}
+.unselectable
+{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}

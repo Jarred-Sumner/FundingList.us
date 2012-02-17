@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  issuer_date: 2012-02-08
+  company: 
+  amount: MyString
+
+two:
+  issuer_date: 2012-02-08
+  company: 
+  amount: MyString

@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  round_id: 
+  debt: false
+  acquired: false
+  equity: false
+  option: false
+  pooled_investment_fund: false
+  tenant_in_common: false
+  mineral_property: false
+  other: MyString
+
+two:
+  round_id: 
+  debt: false
+  acquired: false
+  equity: false
+  option: false
+  pooled_investment_fund: false
+  tenant_in_common: false
+  mineral_property: false
+  other: MyString

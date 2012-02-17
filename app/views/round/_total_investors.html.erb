@@ -1,0 +1,3 @@
+<% unless @round.investor_count %>
+  <p id='total_investors'>There were <%= @round.investor_count.to_s %> investor(s) who invested in this round.</p>
+<% end %>

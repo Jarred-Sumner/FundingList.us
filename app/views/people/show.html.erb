@@ -1,0 +1,6 @@
+<%= stylesheet_link_tag 'people' %>
+<div id='show' class='row'>
+  <h1><%= @person.full_name %></h1> 
+  <%= render 'personal_information' %>
+  <%= render 'related_companies' %>
+</div>

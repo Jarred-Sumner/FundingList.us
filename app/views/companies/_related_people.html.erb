@@ -1,0 +1,8 @@
+<div id='related_people'>
+  <h2>Related People:</h2>
+  <ul id='related_people_list'>
+    <% @company.related_people.each do |person| %>
+      <li class='person'><a href='/person/<%= person['id'] %>'><%= person['title'] %></a></li>
+    <% end %>
+  </ul>
+</div>

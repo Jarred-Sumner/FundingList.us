@@ -1,0 +1,11 @@
+<%= stylesheet_link_tag "companies" %>
+<div id='companies'>
+  <h1>Know your competitors</h1>
+  <h3>Find out and stay up to date on any startup's funding</h3>
+  <input type='search' id='search' placeholder='Twitter' value='<%= params[:search] %>'/>
+  <ul id='companies_list'>
+    <li class='company'><h3><a class='company_link' href='/companies/1'>2413 Pacific Avenue Limited Partnership</a></h3></li>
+    <li class='company'><h3><a href='/companies/2'>8218 West Third LLC</a><h3></li>
+  </ul>
+</div>
+<%= javascript_include_tag 'search' %>

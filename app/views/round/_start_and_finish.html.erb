@@ -1,0 +1,7 @@
+<% if @round.first_investment and @round.end_date %>
+  <p id='start_and_end'>The round started on <%= @round.first_investment.strftime('%A, %B %d, %Y').to_s %> and ended on <%= @round.end_date.strftime('%A, %B %d, %Y').to_s %>.</p>
+<% elsif @round.first_investment %>
+  <p id='start'>The round started on <%= @round.first_investment.strftime('%A, %B %d, %Y').to_s %>.</p>
+<% elsif @round.end_date %>
+  <p id='end_date'>The round ended on <%= @round.end_date.strftime('%A, %B %d, %Y').to_s %>.</p>
+<% end %>
