@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"rece",
+				"recepient_id"
+			],
+			[
 				"rel",
 				"related_person"
 			],
@@ -40,42 +44,51 @@
 	"buffers":
 	[
 		{
-			"file": "app/assets/javascripts/companies.js.coffee",
+			"contents": "source 'https://rubygems.org'\n\ngem 'rails', '3.2.1'\n\n# XML Parsing\ngem 'nokogiri'\n\n\ngem 'jquery-rails'\n\ngroup :assets do\n  gem 'sass-rails',   '~> 3.2.3'\n  gem 'coffee-rails', '~> 3.2.1'\n  gem 'therubyracer'\n  gem 'uglifier', '>= 1.0.3'\nend\n\ngroup :development do\n  gem 'pry'\nend\n\n# SCSS niceities\ngem 'bourbon'\n# Better JSON Templates\ngem 'rabl'\n\n# Slightly faster page loads\ngem 'pjax-rails'\n\n# Database \ngem 'sqlite3'\ngem 'pg'\n\n# Bootstrap\ngem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails', :git => 'git://github.com/anjlab/bootstrap-rails.git'\n\n# Deployment\ngem 'capistrano'",
+			"file": "Gemfile",
+			"file_size": 587,
+			"file_write_time": 129739916351727701,
 			"settings":
 			{
-				"buffer_size": 704,
+				"buffer_size": 588,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/models/company.rb",
+			"file": "/E/Programming/jarredsumner.com/config/deploy.rb",
 			"settings":
 			{
-				"buffer_size": 5442,
+				"buffer_size": 905,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/models/related_person.rb",
+			"file": "/E/Programming/jarredsumner.com/config/database.yml",
 			"settings":
 			{
-				"buffer_size": 1868,
+				"buffer_size": 278,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/models/person.rb",
-			"settings":
-			{
-				"buffer_size": 1352,
-				"line_ending": "Unix"
-			}
-		},
-		{
+			"contents": "<%= stylesheet_link_tag \"companies\" %>\n<div id='companies'>\n  <h1>Know your competitors</h1>\n  <h3>Find out and stay up to date on any startup's funding</h3>\n  <input type='search' id='search' placeholder='Twitter' value='<%= params[:search] %>'/>\n  <ul id='companies_list'>\n    \n  </ul>\n</div>\n<%= javascript_include_tag 'search' %>",
 			"file": "app/views/companies/index.html.erb",
+			"file_size": 538,
+			"file_write_time": 129739903517102911,
 			"settings":
 			{
-				"buffer_size": 146,
+				"buffer_size": 333,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "require File.expand_path('../boot', __FILE__)\n\nrequire 'rails/all'\n\nif defined?(Bundler)\n  # If you precompile assets before deploying to production, use this line\n  Bundler.require(*Rails.groups(:assets => %w(development test)))\n  require 'open-uri'\n  BASE_URL = 'http://www.sec.gov/Archives/edgar/data/'\nend\n\nmodule Albipes\n  class Application < Rails::Application\n    # Settings in config/environments/* take precedence over those specified here.\n    # Application configuration should go into files in config/initializers\n    # -- all .rb files in that directory are automatically loaded.\n\n    # Custom directories with classes and modules you want to be autoloadable.\n    # config.autoload_paths += %W(#{config.root}/extras)\n\n    # Only load the plugins named here, in the order given (default is alphabetical).\n    # :all can be used as a placeholder for all plugins not explicitly named.\n    # config.plugins = [ :exception_notification, :ssl_requirement, :all ]\n\n    # Activate observers that should always be running.\n    # config.active_record.observers = :cacher, :garbage_collector, :forum_observer\n\n    # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.\n    # Run \"rake -D time\" for a list of tasks for finding time zone names. Default is UTC.\n    # config.time_zone = 'Central Time (US & Canada)'\n\n    # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.\n    # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]\n    # config.i18n.default_locale = :de\n\n    # Configure the default encoding used in templates for Ruby 1.9.\n    config.encoding = \"utf-8\"\n\n    # Configure sensitive parameters which will be filtered from the log file.\n    config.filter_parameters += [:password]\n\n    # Use SQL instead of Active Record's schema dumper when creating the database.\n    # This is necessary if your schema can't be completely dumped by the schema dumper,\n    # like if you have constraints or database-specific column types\n    # config.active_record.schema_format = :sql\n\n    # Enforce whitelist mode for mass assignment.\n    # This will create an empty whitelist of attributes available for mass-assignment for all models\n    # in your app. As such, your models will need to explicitly whitelist or blacklist accessible\n# parameters by using an attr_accessible or attr_protected declaration.\n    # config.active_record.whitelist_attributes = true\n\n    # Enable the asset pipeline\n    config.assets.enabled = true\n\n    # Version of your assets, change this if you want to expire all your assets\n    config.assets.version = '1.0'\n  end\nend\n",
+			"file": "config/application.rb",
+			"file_size": 2668,
+			"file_write_time": 129739913469951762,
+			"settings":
+			{
+				"buffer_size": 2664,
 				"line_ending": "Unix"
 			}
 		},
@@ -83,16 +96,16 @@
 			"file": "lib/tasks/sec.rake",
 			"settings":
 			{
-				"buffer_size": 1440,
+				"buffer_size": 1826,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/views/companies/_related_people.html.erb",
+			"file": "config/database.yml",
 			"settings":
 			{
-				"buffer_size": 259,
-				"line_ending": "Windows"
+				"buffer_size": 586,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -188,41 +201,60 @@
 	},
 	"file_history":
 	[
-		"/E/Programming/Albipes/app/views/people/_related_companies.html.erb",
-		"/E/Programming/Albipes/app/views/companies/show.html.erb",
-		"/E/Programming/Albipes/app/controllers/companies_controller.rb",
-		"/E/Programming/Albipes/Gemfile",
-		"/E/Programming/Albipes/app/models/company.rb",
-		"/E/Programming/Albipes/public/form.idx",
-		"/E/Programming/Albipes/app/models/round.rb",
-		"/E/Programming/Albipes/db/migrate/20120209014342_create_rounds.rb",
-		"/E/Programming/Albipes/app/models/related_person.rb",
-		"/E/Programming/Albipes/app/models/person.rb",
-		"/E/Programming/Albipes/config/routes.rb",
+		"/E/Programming/Albipes/config/environments/production.rb",
+		"/E/Programming/Albipes/app/controllers/home_controller.rb",
+		"/E/Programming/Albipes/app/assets/javascripts/handlebars.js",
 		"/E/Programming/Albipes/app/assets/javascripts/application.js",
 		"/E/Programming/Albipes/app/assets/stylesheets/jquery-ui-1.8.17.custom.css",
+		"/E/Programming/Albipes/config/deploy.rb",
+		"/E/Programming/Albipes/README.rdoc",
+		"/E/Programming/Albipes/config/environments/development.rb",
+		"/E/Programming/Albipes/Rails.gitignore",
+		"/E/Programming/Albipes/config/database.yml",
+		"/E/Programming/Albipes/app/assets/javascripts/search.js.coffee",
+		"/E/Programming/Albipes/app/mailers/companies_mailer.rb",
+		"/E/Programming/Albipes/app/views/layouts/application.html.erb",
 		"/E/Programming/Albipes/app/assets/stylesheets/application.css.scss",
+		"/E/Programming/Albipes/app/views/companies/index.html.erb",
+		"/E/Programming/Albipes/app/views/companies/show.html.erb",
+		"/E/Programming/Albipes/app/controllers/companies_controller.rb",
+		"/E/Programming/Albipes/app/assets/stylesheets/companies.css.scss",
+		"/E/Programming/Albipes/app/views/companies/_rounds.html.erb",
+		"/E/Programming/Albipes/app/views/companies/_related_people.html.erb",
+		"/E/Programming/Albipes/app/views/people/show.html.erb",
+		"/E/Programming/Albipes/app/assets/javascripts/show_companies.js.coffee",
+		"/E/Programming/Albipes/app/models/email_update.rb",
+		"/E/Programming/Albipes/config/routes.rb",
+		"/E/Programming/Albipes/config/application.rb",
+		"/E/Programming/Albipes/app/views/companies_mailer/keeping_you_updated.text.erb",
+		"/E/Programming/Albipes/app/views/companies_mailer/update.text.erb",
+		"/E/Programming/Albipes/app/models/company.rb",
+		"/E/Programming/Albipes/db/schema.rb",
+		"/E/Programming/Albipes/app/models/round.rb",
+		"/E/Programming/Albipes/db/migrate/20120217201405_create_email_updates.rb",
+		"/E/Programming/Albipes/config/locales/en.yml",
+		"/E/Programming/Albipes/app/views/companies/search.json.rabl",
+		"/E/Programming/Albipes/app/models/person.rb",
+		"/E/Programming/Albipes/app/models/related_person.rb",
+		"/E/Programming/Albipes/app/views/companies/_update_me.html.erb",
+		"/E/Programming/Albipes/app/assets/javascripts/show_company.js.coffee",
+		"/E/Programming/Albipes/Gemfile",
+		"/E/Programming/Albipes/lib/tasks/sec.rake",
+		"/E/Programming/Albipes/app/assets/javascripts/companies.js.coffee",
+		"/E/Programming/Albipes/app/views/people/_related_companies.html.erb",
+		"/E/Programming/Albipes/public/form.idx",
+		"/E/Programming/Albipes/db/migrate/20120209014342_create_rounds.rb",
 		"/E/Programming/Albipes/app/assets/javascripts/jquery.textchange.min.js",
 		"/E/Programming/Albipes/tmp/cache/sass/967315fc193614c5b13ce4a5fb38b36c4579870b/bootstrap.scssc",
 		"/E/Programming/Albipes/app/assets/javascripts/bootstrap-typeahead.js",
 		"/E/Programming/Albipes/app/views/companies/index.json.rabl",
-		"/E/Programming/Albipes/app/views/companies/search.json.rabl",
-		"/E/Programming/Albipes/app/assets/stylesheets/companies.css.scss",
-		"/E/Programming/Albipes/app/assets/javascripts/companies.js.coffee",
 		"/E/Programming/Albipes/test/functional/round_controller_test.rb",
-		"/E/Programming/Albipes/app/views/companies/index.html.erb",
-		"/E/Programming/Albipes/app/views/companies/_update_me.html.erb",
 		"/E/Programming/Albipes/app/controllers/people_controller.rb",
 		"/E/Programming/Albipes/app/assets/stylesheets/people.css.scss",
 		"/E/Programming/Albipes/tmp/cache/sass/3a7127ddf759617a5a12a11710029aa4b98ca6dc/company.css.scssc",
 		"/E/Programming/Albipes/app/views/companies/_notify.html.erb",
-		"/E/Programming/Albipes/app/views/companies/_related_people.html.erb",
 		"/E/Programming/Albipes/app/views/people/_personal_information.html.erb",
-		"/E/Programming/Albipes/app/views/people/show.html.erb",
 		"/E/Programming/Albipes/app/views/round/_related_people.html.erb",
-		"/E/Programming/Albipes/app/views/layouts/application.html.erb",
-		"/E/Programming/Albipes/db/schema.rb",
-		"/E/Programming/Albipes/app/views/companies/_rounds.html.erb",
 		"/E/Programming/Albipes/app/views/companies/_related_people.rb",
 		"/E/Programming/Albipes/app/views/round/_total_investors.html.erb",
 		"/E/Programming/Albipes/app/views/round/show.html.erb",
@@ -246,7 +278,6 @@
 		"/E/Programming/Albipes/app/views/company/show.html.erb",
 		"/E/Programming/Albipes/app/controllers/company_controller.rb",
 		"/E/Multimedia/Downloads/incomplete/House S08E12/house.812.720p-dimension/Click Here For Password.html",
-		"/E/Programming/Albipes/lib/tasks/sec.rake",
 		"/E/Multimedia/DOwnloads/form.idx",
 		"/E/Programming/Albipes/app/views/company/_convincing.html.erb",
 		"/E/Programming/Albipes/app/views/company/_search.html.erb",
@@ -274,7 +305,6 @@
 		"/E/Programming/Albipes/config/sunspot.yml",
 		"/E/Programming/Albipes/config/initializers/rabl_config.rb",
 		"/E/Programming/Albipes/app/views/round/index.html.erb",
-		"/E/Programming/Albipes/app/assets/javascripts/handlebars.js",
 		"/E/Programming/Albipes/app/assets/javascripts/backbone/models/company.js.coffee",
 		"/E/Programming/Albipes/app/assets/javascripts/backbone/templates/companies/index.jst.ejs",
 		"/E/Programming/Albipes/app/assets/javascripts/backbone/views/companies/company_view.js.coffee",
@@ -290,7 +320,6 @@
 		"/E/Programming/Albipes/db/development.sqlite3",
 		"/E/Programming/Albipes/db/migrate/20120211063234_add_tried_to_raise_in_round_and_convert_raised_to_integer.rb",
 		"/E/Programming/Albipes/db/migrate/20120211192841_add_signed_by_to_round.rb",
-		"/E/Programming/Albipes/config/application.rb",
 		"/C/Users/Administrator/AppData/Local/Temp/fz3temp-1/form 2.idx",
 		"/E/Programming/Albipes/db/migrate/20120209014301_create_rounds.rb",
 		"/E/Programming/jantire/LICENSE",
@@ -299,23 +328,7 @@
 		"/E/Programming/jantire/config/initializers/devise.rb",
 		"/E/Programming/jantire/app/views/assignments/show.html.erb",
 		"/E/Programming/jantire/app/controllers/grades_controller.rb",
-		"/E/Programming/jantire/app/views/courses/show.html.erb",
-		"/E/Programming/jantire/app/views/courses/index.html.erb",
-		"/E/Programming/jantire/app/controllers/courses_controller.rb",
-		"/E/Programming/jantire/app/views/assignments/index.html.erb",
-		"/E/Programming/jantire/app/views/assignments/turn_in.html.erb",
-		"/E/Programming/jantire/db/migrate/20111104231132_create_courses_user.rb",
-		"/E/Programming/jantire/config/database.yml",
-		"/E/Programming/jantire/app/models/course.rb",
-		"/E/Programming/jantire/app/models/user.rb",
-		"/E/Programming/jantire/app/assets/javascripts/application.js",
-		"/E/Programming/jantire/app/assets/stylesheets/assignments.css.scss",
-		"/E/Programming/jantire/app/assets/javascripts/grade_assignment.js",
-		"/E/Programming/jantire/app/models/grade.rb",
-		"/E/Programming/jantire/Gemfile",
-		"/E/Programming/jantire/app/controllers/assignments_controller.rb",
-		"/E/Programming/jantire/app/assets/javascripts/form.js",
-		"/E/Programming/jantire/app/views/layouts/application.html.erb"
+		"/E/Programming/jantire/app/views/courses/show.html.erb"
 	],
 	"find":
 	{
@@ -323,7 +336,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 91.0,
 		"where_history":
 		[
 			""
@@ -334,6 +347,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"jarred",
 			"background",
 			"notify",
 			"tr",
@@ -387,30 +401,28 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/assets/javascripts/companies.js.coffee",
+					"file": "Gemfile",
 					"settings":
 					{
-						"buffer_size": 704,
+						"buffer_size": 588,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								704,
-								704
+								153,
+								153
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CoffeeScript/Syntaxes/CoffeeScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -420,25 +432,23 @@
 				},
 				{
 					"buffer": 1,
-					"file": "app/models/company.rb",
+					"file": "/E/Programming/jarredsumner.com/config/deploy.rb",
 					"settings":
 					{
-						"buffer_size": 5442,
+						"buffer_size": 905,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1129,
-								1129
+								904,
+								904
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -448,51 +458,23 @@
 				},
 				{
 					"buffer": 2,
-					"file": "app/models/related_person.rb",
+					"file": "/E/Programming/jarredsumner.com/config/database.yml",
 					"settings":
 					{
-						"buffer_size": 1868,
+						"buffer_size": 278,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								446,
-								446
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/models/person.rb",
-					"settings":
-					{
-						"buffer_size": 1352,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1116,
-								1116
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"syntax": "Packages/YAML/YAML.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -505,23 +487,23 @@
 			]
 		},
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
-					"buffer": 4,
+					"buffer": 3,
 					"file": "app/views/companies/index.html.erb",
 					"settings":
 					{
-						"buffer_size": 146,
+						"buffer_size": 333,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								146,
-								146
+								333,
+								333
 							]
 						],
 						"settings":
@@ -530,6 +512,34 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "config/application.rb",
+					"settings":
+					{
+						"buffer_size": 2664,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2382,
+								2382
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 216.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -539,15 +549,15 @@
 					"file": "lib/tasks/sec.rake",
 					"settings":
 					{
-						"buffer_size": 1440,
+						"buffer_size": 1826,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								550,
-								550
+								1017,
+								1017
 							]
 						],
 						"settings":
@@ -557,30 +567,32 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 39.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 6,
-					"file": "app/views/companies/_related_people.html.erb",
+					"file": "config/database.yml",
 					"settings":
 					{
-						"buffer_size": 259,
+						"buffer_size": 586,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								259,
-								259
+								549,
+								549
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+							"syntax": "Packages/YAML/YAML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -619,7 +631,7 @@
 		"cols":
 		[
 			0.0,
-			0.507291666667,
+			0.246955749354,
 			1.0
 		],
 		"rows":
@@ -640,8 +652,84 @@
 		"selected_items":
 		[
 			[
-				"company.rb",
-				"app/models/company.rb"
+				"datab",
+				"config/database.yml"
+			],
+			[
+				"application.js",
+				"app/assets/javascripts/application.js"
+			],
+			[
+				"production.rb",
+				"config/environments/production.rb"
+			],
+			[
+				"readme",
+				"README.rdoc"
+			],
+			[
+				"deploy.rb",
+				"config/deploy.rb"
+			],
+			[
+				"rails",
+				"Rails.gitignore"
+			],
+			[
+				"development",
+				"config/environments/development.rb"
+			],
+			[
+				"sec.rake",
+				"lib/tasks/sec.rake"
+			],
+			[
+				"application.rb",
+				"config/application.rb"
+			],
+			[
+				"gemfile",
+				"Gemfile"
+			],
+			[
+				"databa",
+				"config/database.yml"
+			],
+			[
+				"companies_mailer",
+				"app/mailers/companies_mailer.rb"
+			],
+			[
+				"deve",
+				"config/environments/development.rb"
+			],
+			[
+				"applicatio",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"index",
+				"app/views/companies/index.html.erb"
+			],
+			[
+				"app",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"application.css",
+				"app/assets/stylesheets/application.css.scss"
+			],
+			[
+				"companies.css",
+				"app/assets/stylesheets/companies.css.scss"
+			],
+			[
+				"companies_controller",
+				"app/controllers/companies_controller.rb"
+			],
+			[
+				"_rounds",
+				"app/views/companies/_rounds.html.erb"
 			],
 			[
 				"_related",
@@ -649,23 +737,131 @@
 			],
 			[
 				"show",
-				"app/views/companies/show.html.erb"
+				"app/views/people/show.html.erb"
 			],
 			[
-				"companies_controller",
+				"search",
+				"app/assets/javascripts/search.js.coffee"
+			],
+			[
+				"companies.css.css",
+				"app/assets/stylesheets/companies.css.scss"
+			],
+			[
+				"application.html.erb",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"companies.js",
+				"app/assets/javascripts/show_companies.js.coffee"
+			],
+			[
+				"routes.rb",
+				"config/routes.rb"
+			],
+			[
+				"keep",
+				"app/views/companies_mailer/keeping_you_updated.text.erb"
+			],
+			[
+				"comies_controller",
 				"app/controllers/companies_controller.rb"
 			],
 			[
-				"gemfile",
-				"Gemfile"
+				"update.text",
+				"app/views/companies_mailer/update.text.erb"
 			],
 			[
-				"person.rb",
-				"app/models/person.rb"
+				"development.rb",
+				"config/environments/development.rb"
+			],
+			[
+				"schema",
+				"db/schema.rb"
+			],
+			[
+				"email_upda",
+				"app/models/email_update.rb"
+			],
+			[
+				"email",
+				"app/models/email_update.rb"
+			],
+			[
+				"email_",
+				"app/models/email_update.rb"
+			],
+			[
+				"emai",
+				"app/models/email_update.rb"
 			],
 			[
 				"round.rb",
 				"app/models/round.rb"
+			],
+			[
+				"email_update",
+				"app/models/email_update.rb"
+			],
+			[
+				"company.rb",
+				"app/models/company.rb"
+			],
+			[
+				"create_email",
+				"db/migrate/20120217201405_create_email_updates.rb"
+			],
+			[
+				"en.yml",
+				"config/locales/en.yml"
+			],
+			[
+				"searc",
+				"app/assets/javascripts/search.js.coffee"
+			],
+			[
+				"search.",
+				"app/views/companies/search.json.rabl"
+			],
+			[
+				"show_companies",
+				"app/assets/javascripts/show_companies.js.coffee"
+			],
+			[
+				"_update",
+				"app/views/companies/_update_me.html.erb"
+			],
+			[
+				"show_com",
+				"app/assets/javascripts/show_company.js.coffee"
+			],
+			[
+				"applicat",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"update_me",
+				"app/views/companies/_update_me.html.erb"
+			],
+			[
+				"companies.js.",
+				"app/assets/javascripts/companies.js.coffee"
+			],
+			[
+				"companies",
+				"app/assets/javascripts/companies.js.coffee"
+			],
+			[
+				"companies.js.coffee",
+				"app/assets/javascripts/companies.js.coffee"
+			],
+			[
+				"companies_controll",
+				"app/controllers/companies_controller.rb"
+			],
+			[
+				"person.rb",
+				"app/models/person.rb"
 			],
 			[
 				"related_person",
@@ -680,28 +876,12 @@
 				"app/models/related_person.rb"
 			],
 			[
-				"sec.rake",
-				"lib/tasks/sec.rake"
-			],
-			[
 				"jquery",
 				"app/assets/stylesheets/jquery-ui-1.8.17.custom.css"
 			],
 			[
-				"application.js",
-				"app/assets/javascripts/application.js"
-			],
-			[
-				"application.css",
-				"app/assets/stylesheets/application.css.scss"
-			],
-			[
 				"bootstrap.cs",
 				"tmp/cache/sass/967315fc193614c5b13ce4a5fb38b36c4579870b/bootstrap.scssc"
-			],
-			[
-				"companies_controll",
-				"app/controllers/companies_controller.rb"
 			],
 			[
 				"index.json.rabl",
@@ -720,20 +900,8 @@
 				"app/assets/javascripts/bootstrap-typeahead.js"
 			],
 			[
-				"search.",
-				"app/views/companies/search.json.rabl"
-			],
-			[
 				"search.json",
 				"app/views/companies/search.json.rabl"
-			],
-			[
-				"companies.js.coffee",
-				"app/assets/javascripts/companies.js.coffee"
-			],
-			[
-				"companies.css.css",
-				"app/assets/stylesheets/companies.css.scss"
 			],
 			[
 				"routes",
@@ -748,28 +916,8 @@
 				"app/models/company.rb"
 			],
 			[
-				"index",
-				"app/views/companies/index.html.erb"
-			],
-			[
-				"companies.js",
-				"app/assets/javascripts/companies.js.coffee"
-			],
-			[
-				"_update",
-				"app/views/companies/_update_me.html.erb"
-			],
-			[
-				"companies.css",
-				"app/assets/stylesheets/companies.css.scss"
-			],
-			[
 				"company.css",
 				"tmp/cache/sass/3a7127ddf759617a5a12a11710029aa4b98ca6dc/company.css.scssc"
-			],
-			[
-				"update_me",
-				"app/views/companies/_update_me.html.erb"
 			],
 			[
 				"_notif",
@@ -792,16 +940,8 @@
 				"app/controllers/people_controller.rb"
 			],
 			[
-				"schema",
-				"db/schema.rb"
-			],
-			[
 				"people.css.scs",
 				"app/assets/stylesheets/people.css.scss"
-			],
-			[
-				"routes.rb",
-				"config/routes.rb"
 			],
 			[
 				"people_controll",
@@ -810,10 +950,6 @@
 			[
 				"_start",
 				"app/views/round/_start_and_finish.html.erb"
-			],
-			[
-				"application.html.erb",
-				"app/views/layouts/application.html.erb"
 			],
 			[
 				"_reve",
@@ -868,20 +1004,12 @@
 				"app/helpers/companies_helper.rb"
 			],
 			[
-				"deve",
-				"log/development.log"
-			],
-			[
 				"compan",
 				"app/controllers/companies_controller.rb"
 			],
 			[
 				"companies.cssc",
 				"app/assets/stylesheets/companies.css.scss"
-			],
-			[
-				"app",
-				"app/helpers/application_helper.rb"
 			],
 			[
 				"show.html.erb",
@@ -904,10 +1032,6 @@
 				"app/helpers/company_helper.rb"
 			],
 			[
-				"search",
-				"app/views/companies/search.json.rabl"
-			],
-			[
 				"show.html",
 				"app/views/company/show.html.erb"
 			],
@@ -922,10 +1046,6 @@
 			[
 				"company.js",
 				"app/assets/javascripts/company.js.coffee"
-			],
-			[
-				"searc",
-				"app/views/company/search.json.rabl"
 			],
 			[
 				"devel",
@@ -1042,114 +1162,6 @@
 			[
 				"add_r",
 				"db/migrate/20120212075827_add_reason_and_city_and_first_investment_and_investors_and_revenue_range_and_signed_by_to_round.rb"
-			],
-			[
-				"g",
-				"Gemfile"
-			],
-			[
-				"company.js.",
-				"app/assets/javascripts/company.js.coffee"
-			],
-			[
-				"company.css.css",
-				"app/assets/stylesheets/company.css.scss"
-			],
-			[
-				"develop",
-				"log/development.log"
-			],
-			[
-				"sunspot",
-				"config/sunspot.yml"
-			],
-			[
-				"rounds.css",
-				"app/assets/stylesheets/round.css.scss"
-			],
-			[
-				"",
-				"app/assets/javascripts/handlebars.js"
-			],
-			[
-				"backbone",
-				"app/assets/javascripts/backbone/albipes.js.coffee"
-			],
-			[
-				"company_view",
-				"app/assets/javascripts/backbone/views/companies/company_view.js.coffee"
-			],
-			[
-				"index_view",
-				"app/assets/javascripts/backbone/views/companies/index_view.js.coffee"
-			],
-			[
-				"index.jst.",
-				"app/assets/javascripts/backbone/templates/companies/index.jst.ejs"
-			],
-			[
-				"companies_router",
-				"app/assets/javascripts/backbone/routers/companies_router.js.coffee"
-			],
-			[
-				"index.jst",
-				"app/assets/javascripts/backbone/templates/companies/index.jst.ejs"
-			],
-			[
-				"comapny.js",
-				"app/assets/javascripts/backbone/views/companies/company_view.js.coffee"
-			],
-			[
-				"round.css.css",
-				"app/assets/stylesheets/round.css.scss"
-			],
-			[
-				"round.js",
-				"app/assets/javascripts/backbone/models/round.js.coffee"
-			],
-			[
-				"round.js.coffee",
-				"app/assets/javascripts/round.js.coffee"
-			],
-			[
-				"application.rb",
-				"config/application.rb"
-			],
-			[
-				"datab",
-				"config/database.yml"
-			],
-			[
-				"devise.",
-				"config/initializers/devise.rb"
-			],
-			[
-				"deploy.rb",
-				"config/deploy.rb"
-			],
-			[
-				"show.",
-				"app/views/assignments/show.html.erb"
-			],
-			[
-				"grades_controller",
-				"app/controllers/grades_controller.rb"
-			],
-			[
-				"course.rb",
-				"app/models/course.rb"
-			],
-			[
-				"courses_controller",
-				"app/controllers/courses_controller.rb"
-			],
-			[
-				"user.rb",
-				"app/models/user.rb"
-			],
-			[
-				"assignments_controller",
-				"app/controllers/assignments_controller.rb"
 			]
 		],
 		"width": 0.0
@@ -1165,7 +1177,7 @@
 	"show_minimap": false,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": false,
-	"side_bar_width": 150.0,
+	"side_bar_visible": true,
+	"side_bar_width": 372.0,
 	"status_bar_visible": true
 }

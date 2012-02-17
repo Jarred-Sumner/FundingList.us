@@ -70,7 +70,7 @@ class Company < ActiveRecord::Base
     file_name = 'form.idx'
     full_url = "#{base_url}/#{year}/QTR#{quarter}/#{file_name}"
     full_url = "./public/form.idx" if disk
-    full_url = "./public/#{relative_pat}" if relative_path
+    full_url = "./public/#{relative_path}" if relative_path
     p "Downloading file from: #{full_url}"
     open(full_url) do |listing|
       p "File Downloaded"
