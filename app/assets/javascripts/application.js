@@ -16,7 +16,6 @@
 //= require pjax
 //= require jquery.textchange.min
 //= require bootstrap-modal
-//= require bootstrap-typeahead
 //= require_self
 $(document).ready(function()
 {
