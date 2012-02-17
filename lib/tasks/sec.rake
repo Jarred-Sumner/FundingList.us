@@ -3,7 +3,9 @@ namespace :sec do
 
   desc 'Parses SEC Data from Web'
   task 'load' => :environment do
-    (2009..2012).each do |year|
+    (2008..2012).each do |year|
+      start_index = 1
+      start_index = 4 if year == 2008
       (1..4).each do |quarter|
         break if year == 2012 and quarter > 1
         Company.parse_from_quarterly_filings(year, quarter, false, nil) 
@@ -13,8 +15,10 @@ namespace :sec do
 
   desc 'Downloads all quarterly filings to disk'
   task 'download' => :environment do
-    (2010..2012).each do |year|
-      (1..4).each do |quarter|
+    (2008..2012).each do |year|
+      start_index = 1
+      start_index = 4 if year == 2008
+      (start_index..4).each do |quarter|
         partial_url = "#{year}/QTR#{quarter}"
         FileUtils.mkpath("./public/#{partial_url}")
         break if year == 2012 and quarter > 1
@@ -38,10 +42,15 @@ namespace :sec do
     end
   end
 
-  desc 'Downloads and installs daily filing'
   desc 'Parses SEC Data from Disk'
   task 'load:disk' => :environment do
     Company.parse_from_quarterly_filings(2011, 4, true, nil)
   end
-
+end
+task 'deploy' => :environment do
+  exec 'bundle install --deployment'
+  exec 'bundle exec rake db:migrate RAILS_ENV=production'
+  exec 'bundle exec rake sec:download'
+  exec 'bundle exec rake sec:load:disk:all'
+  exec 'bundle exec rake assets:precompile RAILS_ENV=production'
 end
