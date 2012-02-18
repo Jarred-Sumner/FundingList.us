@@ -23,7 +23,7 @@ class CompaniesController < ApplicationController
   end
 
   def subscribe
-    @email = EmailUpdate.create(:email => params[:email], :company_id => params[:id]) unless Email.find_by_email_and_company_id(params[:email], params[:id])
+    @email = EmailUpdate.create(:email => params[:email], :company_id => params[:id]) if EmailUpdate.where(:email => params[:email], :company_id => params[:id]).empty?
     respond_to do |format|
       format.html { redirect_to '/'}
       format.json { render :json => @email }
