@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120218001154) do
+ActiveRecord::Schema.define(:version => 20120218015338) do
 
   create_table "companies", :force => true do |t|
     t.string   "name"
@@ -60,21 +60,21 @@ ActiveRecord::Schema.define(:version => 20120218001154) do
 
   create_table "rounds", :force => true do |t|
     t.integer  "company_id"
-    t.string   "accession",                               :null => false
-    t.string   "filing_url",                              :null => false
-    t.string   "use_of_funds",     :default => "Unknown"
-    t.string   "revenue_range",    :default => "Unknown"
+    t.string   "accession",                                              :null => false
+    t.text     "filing_url",       :limit => 255,                        :null => false
+    t.text     "use_of_funds",     :limit => 255, :default => "Unknown"
+    t.string   "revenue_range",                   :default => "Unknown"
     t.string   "kind"
     t.date     "first_investment"
     t.date     "end_date"
-    t.integer  "raised",           :default => 0
-    t.integer  "tried_to_raise",   :default => 0
-    t.integer  "investor_count",   :default => 0
+    t.integer  "raised",                          :default => 0
+    t.integer  "tried_to_raise",                  :default => 0
+    t.integer  "investor_count",                  :default => 0
     t.integer  "minimum_invested"
     t.boolean  "merger"
     t.boolean  "acquired"
-    t.datetime "created_at",                              :null => false
-    t.datetime "updated_at",                              :null => false
+    t.datetime "created_at",                                             :null => false
+    t.datetime "updated_at",                                             :null => false
   end
 
   add_index "rounds", ["company_id"], :name => "index_rounds_on_company_id"
@@ -88,9 +88,9 @@ ActiveRecord::Schema.define(:version => 20120218001154) do
     t.boolean  "pooled_investment_fund"
     t.boolean  "tenant_in_common"
     t.boolean  "mineral_property"
-    t.string   "other"
-    t.datetime "created_at",             :null => false
-    t.datetime "updated_at",             :null => false
+    t.text     "other",                  :limit => 255
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
   end
 
   add_index "securities", ["round_id"], :name => "index_securities_on_round_id"
