@@ -32,7 +32,7 @@ gem 'sqlite3'
 gem 'pg'
 
 # Bootstrap
-gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails', :git => 'git://github.com/anjlab/bootstrap-rails.git'
+gem 'bootstrap-sass', '~> 2.0.1'
 
 # Deployment
 gem 'capistrano'

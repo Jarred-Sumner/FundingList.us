@@ -39,8 +39,8 @@ class CompaniesController < ApplicationController
   end
 
   def search
-    @results = Company.where("name like ?", "#{params[:query]}%").limit(8)
-    respond_to do |format|
+    @results = Company.where("name ilike ?", "%#{params[:query]}%").limit(8)
+  respond_to do |format|
       format.json
     end
   end

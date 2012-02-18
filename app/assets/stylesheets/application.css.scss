@@ -2,9 +2,9 @@
  *= require_self
  *= require jquery-ui-1.8.17.custom
 */
-@import "bourbon";
+@import "bourbon/bourbon";
 @import "bootstrap";
-@import 'responsive';
+@import 'bootstrap-responsive';
 @import url(http://fonts.googleapis.com/css?family=Asap|Oswald);
 
 #not_affiliated
