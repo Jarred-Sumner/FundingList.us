@@ -60,21 +60,21 @@ ActiveRecord::Schema.define(:version => 20120218001154) do
 
   create_table "rounds", :force => true do |t|
     t.integer  "company_id"
-    t.string   "accession",                               :null => false
-    t.string   "filing_url",                              :null => false
-    t.string   "use_of_funds",     :default => "Unknown"
-    t.string   "revenue_range",    :default => "Unknown"
+    t.string   "accession",                                            :null => false
+    t.string   "filing_url",                                           :null => false
+    t.string   "use_of_funds",                  :default => "Unknown"
+    t.string   "revenue_range",                 :default => "Unknown"
     t.string   "kind"
     t.date     "first_investment"
     t.date     "end_date"
-    t.integer  "raised",           :default => 0
-    t.integer  "tried_to_raise",   :default => 0
-    t.integer  "investor_count",   :default => 0
-    t.integer  "minimum_invested"
+    t.integer  "raised",           :limit => 8, :default => 0
+    t.integer  "tried_to_raise",   :limit => 8, :default => 0
+    t.integer  "investor_count",   :limit => 8, :default => 0
+    t.integer  "minimum_invested", :limit => 8
     t.boolean  "merger"
     t.boolean  "acquired"
-    t.datetime "created_at",                              :null => false
-    t.datetime "updated_at",                              :null => false
+    t.datetime "created_at",                                           :null => false
+    t.datetime "updated_at",                                           :null => false
   end
 
   add_index "rounds", ["company_id"], :name => "index_rounds_on_company_id"

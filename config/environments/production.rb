@@ -26,11 +26,11 @@ Albipes::Application.configure do
     :port                 => 587,
     :domain               => 'fundinglist.us',
     :user_name            => 'updates@fundinglist.us',
-    :password             => 'REDACTED',
+    :password             => 'daman19912',
     :authentication       => 'plain',
     :enable_starttls_auto => true  }
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
-  config.assets.precompile += %w( companies.css.scss people.css.scss round.css.scss jquery-ui-1.8.17.custom.css boostrap-modal.js jquery.textchange.min.js people.js.coffee search.js.coffee round.js.coffee show_companies.js.coffee )
+  config.assets.precompile += %w( companies.css people.css round.css jquery-ui-1.8.17.custom.css boostrap-modal.js jquery.textchange.min.js people.js search.js round.js show_companies.js )
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
