@@ -4,7 +4,15 @@
   <h3>Find out and stay up to date on any startup's funding</h3>
   <input type='search' id='search' placeholder='Startup' value='<%= params[:search] %>'/>
   <ul id='companies_list'>
-    
+    <% @companies.each do |company| %>
+    <li class='company unselectable'>
+      <h3>
+        <a href='/companies/<%= company.id %>' class='unselectable'>
+          <%= company.name %>
+        </a>
+      </h3>
+    </li> 
+    <% end %>   
   </ul>
 </div>
 <%= javascript_include_tag 'search' %>
