@@ -39,7 +39,7 @@ class CompaniesController < ApplicationController
   end
 
   def search
-    @results = Company.where("name ilike ?", "#{params[:query]}%").limit(8) unless params[:query].empty?
+    @results = Company.where("name ilike ?", "#{params[:query]}%").limit(8) unless params[:query] == ''
     respond_to do |format|
       format.json
     end
