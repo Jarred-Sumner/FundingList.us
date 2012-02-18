@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120218015338) do
+ActiveRecord::Schema.define(:version => 20120218061729) do
 
   create_table "companies", :force => true do |t|
     t.string   "name"
@@ -50,9 +50,9 @@ ActiveRecord::Schema.define(:version => 20120218015338) do
     t.boolean  "executive_officer"
     t.boolean  "director"
     t.boolean  "promoter"
-    t.string   "explanation"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.text     "explanation",       :limit => 255
+    t.datetime "created_at",                       :null => false
+    t.datetime "updated_at",                       :null => false
   end
 
   add_index "related_people", ["person_id"], :name => "index_related_people_on_person_id"
