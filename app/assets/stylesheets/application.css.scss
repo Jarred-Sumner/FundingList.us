@@ -4,7 +4,6 @@
 */
 @import "bourbon";
 @import "bootstrap";
-@import 'boostrap-responsive';
 @import url(http://fonts.googleapis.com/css?family=Asap|Oswald);
 
 #not_affiliated
@@ -35,4 +34,14 @@
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
+}
+#footer
+{
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
+  right: 25%;
+  left: 25%;
 }
