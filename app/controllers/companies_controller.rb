@@ -23,7 +23,7 @@ class CompaniesController < ApplicationController
   end
 
   def subscribe
-    @email = EmailUpdate.create(:email => params[:email], :company_id => params[:id]) unless Email.find_by_email_and_company_id(params[:email], params[:id])
+    @email = EmailUpdate.create(:email => params[:email], :company_id => params[:id])
     respond_to do |format|
       format.html { redirect_to '/'}
       format.json { render :json => @email }
@@ -34,7 +34,7 @@ class CompaniesController < ApplicationController
     @email = EmailUpdate.where(:email => params[:email]).each { |email| email.destroy }
     respond_to do |format|
       format.html { redirect_to '/' }
-      format.json { render :json => nil}
+      format.json { render :json => @email }
     end
   end
 
