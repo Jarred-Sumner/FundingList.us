@@ -44,7 +44,16 @@ namespace :sec do
 
   desc 'Parses SEC Data from Disk'
   task 'load:disk' => :environment do
+    # Year and Quarter don't matter in this case
     Company.parse_from_quarterly_filings(2011, 4, true, nil)
+  end
+
+  desc 'Downloads the latest SEC filing to disk'
+  task 'download:latest' => :environment do
+    File.new("./public/latest.idx", 'w') unless File.exists?('./public/latest.idx')
+    p 'Downloading ftp://ftp.sec.gov/edgar/full-index/form.idx'
+    open('./public/latest.idx', 'wb').write(open("ftp://ftp.sec.gov/edgar/full-index/form.idx"))
+    p 'Downloaded Successfully'
   end
 end
 task 'deploy' => :environment do
