@@ -48,5 +48,5 @@ namespace :sec do
   end
 end
 task 'deploy' => :environment do
-  exec 'bundle install --deployment && bundle exec rake db:migrate RAILS_ENV=production && bundle exec rake sec:download && bundle exec rake sec:load:disk:all && bundle exec rake assets:precompile RAILS_ENV=production'
+  exec 'bundle install --deployment && bundle exec rake db:migrate RAILS_ENV=production && bundle exec rake sec:download RAILS_ENV=production && bundle exec rake sec:load:disk:all RAILS_ENV=production && bundle exec rake assets:precompile RAILS_ENV=production'
 end

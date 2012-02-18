@@ -10,9 +10,9 @@ class CreateRounds < ActiveRecord::Migration
       t.date       :first_investment
       t.date       :end_date
       t.integer    :raised, :default => 0
-      t.integer    :tried_to_raise, :default => 0
-      t.integer    :investor_count, :default => 0
-      t.integer    :minimum_invested
+      t.integer   :tried_to_raise, :default => 0
+      t.integer   :investor_count, :default => 0
+      t.integer   :minimum_invested
       t.boolean    :merger
       t.boolean    :acquired
       t.timestamps
