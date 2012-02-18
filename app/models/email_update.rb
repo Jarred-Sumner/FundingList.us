@@ -1,6 +1,6 @@
 class EmailUpdate < ActiveRecord::Base
   belongs_to :company
-  after_save :notify_of_updates
+  after_create :notify_of_updates
   
   def self.notify_new_round(round)
     @emails = EmailUpdate.where(:company_id => round.company_id)
