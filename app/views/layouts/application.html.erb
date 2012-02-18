@@ -19,12 +19,23 @@
       </div>
     </div>
     <div class='container' data-pjax-container>
+      <% if flash[:notice] %>
+        <div class='alert alert-success unselectable' id='success_alert'>
+          <div id='success_alert_text'><%= flash[:notice] %></div>
+          <a class="close">&times;</a>
+        </div>
+      <% else %>
         <div class='alert alert-success hidden unselectable' id='success_alert'>
-          <div id='success_alert_text'></div>
-          <a class="close">&times;</a><%= flash[:notice] %></div>
+          <div id='success_alert_text'><%= flash[:notice] %></div>
+          <a class="close">&times;</a>
+        </div>
+      <% end %>
       <%= yield %>
     </div>
-    <div id="not_affiliated">Companies, rounds, and related persons are retrieved from SEC filings. This website is not affiliated with the SEC in any other way.</div>
+    <div id='footer'>
+      <div id='created_by'>Created by <a href='http://jarredsumner.com'>Jarred Sumner</a>. Source code available on <a href='https://github.com/Jarred-Sumner/FundingList.us'>GitHub</a></div>
+      <div id="not_affiliated">Companies, rounds, and related persons are retrieved from SEC filings. This website is not affiliated with the SEC in any other way.</div>
+    </div>
 
   </body>
 </html>

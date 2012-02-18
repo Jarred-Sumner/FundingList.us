@@ -33,13 +33,13 @@ class CompaniesController < ApplicationController
   def unsubscribe
     @email = EmailUpdate.where(:email => params[:email]).each { |email| email.destroy }
     respond_to do |format|
-      format.html { redirect_to '/' }
-      format.json { render :json => @email }
+      format.html { redirect_to '/', :notice => "You won't receive any more emails from FundingList" }
+      format.json { render :json => nil}
     end
   end
 
   def search
-    @results = Company.where("name ilike ?", "#{params[:query]}%").limit(8) unless params[:query] == ''
+    @results = Company.where("name like ?", "#{params[:query]}%").limit(8) unless params[:query] == ''
     respond_to do |format|
       format.json
     end

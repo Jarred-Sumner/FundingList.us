@@ -14,7 +14,6 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require pjax
-//= require jquery.textchange.min
 //= require bootstrap-modal
 //= require_self
 $(document).ready(function()
