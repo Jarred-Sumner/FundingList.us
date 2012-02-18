@@ -2,7 +2,7 @@ $("#companies").ready ->
   url = null
   search_results = []
   update_search = ->
-    $.getJSON '/companies/search.json?query=' + $("#search").val(), (data) ->
+    $.getJSON '/companies/search.json?&query=' + $("#search").val(), (data) ->
       search_results = data
       load_results()
   load_results = ->
