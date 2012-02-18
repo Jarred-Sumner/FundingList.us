@@ -17,7 +17,5 @@ $("#companies").ready ->
   update_search() unless $("#search").val() == ''
 
   $('.company').live 'click', ->
-    console.log('not')
-    console.log($(this).children().first().children("a").attr('href'))
     location.pathname = $(this).children().first().children("a").attr('href')
 

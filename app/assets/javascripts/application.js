@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui
+//= require jquery.textchange.min
 //= require pjax
 //= require bootstrap-modal
 //= require_self
