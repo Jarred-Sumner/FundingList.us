@@ -22,7 +22,7 @@ end
 # SCSS niceities
 gem 'bourbon'
 # Better JSON Templates
-gem 'rabl'
+gem 'rabl', '0.5.5.g'
 
 # Slightly faster page loads
 gem 'pjax-rails'
