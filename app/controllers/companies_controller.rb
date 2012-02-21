@@ -1,7 +1,7 @@
 class CompaniesController < ApplicationController
   respond_to :json, :html
   def index
-    @companies = Company.where(:featured => true)
+    @featured = Company.where(:featured => true).limit(4) + Person.where(:featured => true).limit(4)
     respond_to do |format|
       format.html
       format.json { render :json => Company.all.to_json }
@@ -48,7 +48,7 @@ class CompaniesController < ApplicationController
       @first_name = params[:query]
       @last_name  = params[:query]
     end
-    @people    = Person.where("first_name ilike ? OR last_name ilike ?", "%#{@first_name}%", "%#{@last_name}%" ).limit(4) unless params[:query] == ''
+    @people    = Person.where("first_name ilike ? OR last_name ilike ?", "#{@first_name}%", "#{@last_name}%" ).limit(4) unless params[:query] == ''
     @results   = @companies + @people
     @results.shuffle!
     respond_to do |format|
