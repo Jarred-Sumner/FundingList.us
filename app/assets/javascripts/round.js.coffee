@@ -19,6 +19,6 @@ $ ->
 
     series: [
       type: "pie"
-      data: [ ["Raised", FundingList.round.raised], ['Target', FundingList.round.tried_to_raise] ]
+      data: [ ["Raised", FundingList.round.raised], ['Remaining Target', FundingList.round.tried_to_raise - FundingList.round.raised] ]
 
     ]
