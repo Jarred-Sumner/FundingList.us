@@ -1,16 +1,29 @@
+<%= javascript_include_tag 'round' %>
 <%= stylesheet_link_tag 'round' %>
-<div id='show' class='row'>
-  <title>Round #<%= @round.company.rounds.index(@round) + 1 %> for <%= @round.company.name %> | FundedList.us</title>
+<div id='show' class='row page'>
+  <title>Round #<%= @round.company.rounds.reverse.index(@round) + 1 %> for <%= @round.company.name %> | FundedList.us</title>
   <h1>Round #<%= @round.company.rounds.index(@round) + 1 %> for <%= link_to @round.company.name, "/companies/#{@round.company.id}" %></h1>
-  <p id='overview'>In this round, <%= link_to @round.company.name, "/companies/#{@round.company.id}" %><strong> raised <%= number_to_currency @round.raised %> of an attempted <%= number_to_currency @round.tried_to_raise %></strong>. On average, each investor raised <%= number_to_currency @round.average_raised %> with the minimum invested by any individual investor at <%= number_to_currency @round.minimum_invested %>. 
-  </p>
-  <%= render 'start_and_finish' %>
-  <%= render 'total_investors'  %>
-  <%= render "security"         %>
-  <%= render 'use_of_funds'     %>
-  <%= render 'revenue_range'    %>
-  <%= render 'related_people'   %>
+  <div id='chart'>
 
+  </div>
+  <h2>More Info</h2>
+  <table class='table table-bordered'>
+    <thead>
+      <tr>
+        <td>First Investment</td>
+        <td>Minimum Investment</td>
+        <td>Investor Count</td>
+        <td>End Date</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= @round.first_investment.strftime("%B %d, %Y") %></td>
+        <td><%= number_to_currency @round.minimum_invested %></td>
+        <td><%= @round.investor_count %></td>
+        <td><%= @round.end_date.strftime("%B %d, %Y") %></td>
+      </tr>
+    </tbody>
+  </table>
   <h4 id='source'><a href='<%= @round.human_readable_url %>'>Source</a></h4>
-
 </div>

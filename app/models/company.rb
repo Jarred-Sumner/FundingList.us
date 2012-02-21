@@ -1,6 +1,6 @@
 class Company < ActiveRecord::Base
   has_many :email_updates
-  has_many :rounds, :order => 'end_date DESC'
+  has_many :rounds, :order => 'end_date ASC'
   validates_presence_of :cik
   validates_uniqueness_of :cik
 

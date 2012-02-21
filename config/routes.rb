@@ -6,5 +6,5 @@ Albipes::Application.routes.draw do
   match '/unsubscribe' => 'companies#unsubscribe'
   resources :companies
   root :to => 'companies#index'
-  match '/person/:id' => 'people#show'
+  match '/people/:id' => 'people#show'
 end

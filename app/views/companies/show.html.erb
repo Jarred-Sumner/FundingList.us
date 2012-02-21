@@ -1,10 +1,15 @@
 <%= stylesheet_link_tag "companies" %>
+<script src='http://google.com/jsapi'></script>
 <title><%= @company.name %> | FundingList.us </title>
 <div id='show' class='row'>
-  <div id='company' class='span12'>
+  <div id='company' class='span12 page'>
     <h1><%= @company.name %></h1>
-    <p id='overview'>Based in <%= @company.location %>, <%= @company.name %> has raised <%= number_to_currency @company.raised %> from <%= @company.rounds.size %> round(s). <%= @company.name %> has <%= @company.investor_count %> investor(s), averging <%= number_to_currency @company.invested_average %> per investor.</p>
-    <div id='update_me' class='btn btn-primary'>Keep Me Updated</div>
+    <div id='chart'>
+    </div>
+    <div id='update_me_container'>
+      <div id='update_me' class='btn btn-primary'>Keep Me Updated</div>
+    </div>
+
     <div id="more_info">
       <%= render 'related_people' %>
       <%= render 'rounds'         %>

@@ -1,38 +1,30 @@
 #show
 {
-  h1
+  h1, h2
   {
     text-align: center;
   }
-  #overview
+  h2
   {
-    margin-top: 5px;
+    margin-bottom: 5px;
   }
-  p
+  #highcharts-0
   {
-    text-indent: 50px;
+    width: auto;
+    height: 10px;
   }
-  li
+  #explanation
   {
-    margin-left: 55px;
+    width: 100%;
+    height: 100px;
+    margin-top: 15px;
+    #total_invested
+    {
+      text-align: center;
+    }
   }
   #source
   {
     text-align: center;
-  }
-  #related_people
-  {
-    margin-left: 55px;
-    h3
-    {
-    }
-  }
-  #related_people_list
-  {
-    text-align: left;
-    li
-    {
-      margin-left: 0px;
-    }
   }
 }

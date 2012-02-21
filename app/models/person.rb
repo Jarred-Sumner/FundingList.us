@@ -30,4 +30,8 @@ class Person < ActiveRecord::Base
     end 
   end
 
+  def name
+    full_name
+  end
+
 end

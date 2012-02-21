@@ -33,6 +33,12 @@ gem 'pg'
 
 # Bootstrap
 gem 'bootstrap-sass'
+
 # Deployment
 gem 'capistrano'
 
+# Charts
+gem "highcharts-rails", "~> 2.1.9"
+
+# Ruby variables in JS
+gem 'gon'
