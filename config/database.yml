@@ -23,5 +23,5 @@ production:
   adapter: postgresql
   database: fundinglist
   user: postgres
-  pool: 10
-  timeout: 8000
+  pool: 8
+  timeout: 5000
