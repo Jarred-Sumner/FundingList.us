@@ -10,7 +10,7 @@ class CompaniesController < ApplicationController
 
   def show
     @company = Company.find(params[:id])
-    respond_with @company
+    respond_with @company.as_json(:include => :rounds)
   end
 
   def create
@@ -39,7 +39,18 @@ class CompaniesController < ApplicationController
   end
 
   def search
-    @results = Company.where("name ilike ?", "#{params[:query]}%").limit(8) unless params[:query] == ''
+    @companies = Company.where("name ilike ?", "#{params[:query]}%").limit(4)
+    if params[:query].index ' '
+      @first_space = params[:query].index ' '
+      @first_name  = params[:query][0..@first_space - 1]
+      @last_name   = params[:query][@first_space + 1..-1]
+    else
+      @first_name = params[:query]
+      @last_name  = params[:query]
+    end
+    @people    = Person.where("first_name ilike ? OR last_name ilike ?", "%#{@first_name}%", "%#{@last_name}%" ).limit(4) unless params[:query] == ''
+    @results   = @companies + @people
+    @results.shuffle!
     respond_to do |format|
       format.json
     end

@@ -1,8 +1,8 @@
-<%= stylesheet_link_tag "companies" %>
-<div id='companies'>
+<%= stylesheet_link_tag "search" %>
+<div id='companies' class='page'>
   <h1>Know your competitors</h1>
-  <h3>Find out and stay up to date on any startup's funding</h3>
-  <input type='search' id='search' placeholder='Featured Companies' value='<%= params[:search] %>'/>
+  <h3>Find out and stay up to date on most startup's funding</h3>
+  <input type='search' id='search' autocomplete='off' placeholder='Who is the company/person you want to know more about?' value='<%= params[:search] %>'/>
   <ul id='companies_list'>
     <% @companies.each do |company| %>
     <li class='company unselectable'>

@@ -1,8 +1,8 @@
 <div id='rounds'>
   <h2>Funding Rounds:</h2>
-  <ol id="rounds_list">
-    <% @company.rounds.each do |round| %>
-      <li class='round'><a href='/round/<%= round.id %>'><%= number_to_currency round.raised %> from <%= round.investor_count %> investor(s)</a></li>
+  <ol reversed id="rounds_list">
+    <% @company.rounds.reverse.each do |round| %>
+      <li class='round'><a href='/round/<%= round.id %>'><%= round.end_date.strftime('%B %d, %Y') %>: <%= number_to_currency round.raised %></a></li>
     <% end %>
   </ol>
 </div>

@@ -1,10 +1,10 @@
 <% if RelatedPerson.find_by_round_id(@round.id) %>
-    <div id='related_people'>
-      <h3>Related People:</h3>
-      <ul id='related_people_list'>
-        <% RelatedPerson.where(:round_id => @round.id).each do |person| %>
-          <li><a href='/person/<%= person.person_id %>'><%= person.full_name %> - <%= person.title %></a></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <div id='related_people'>
+    <h3>Related People:</h3>
+    <ul id='related_people_list'>
+      <% RelatedPerson.where(:round_id => @round.id).each do |person| %>
+        <li><a href='/people/<%= person.person_id %>'><%= person.full_name %> - <%= person.title %></a></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

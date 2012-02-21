@@ -2,6 +2,7 @@
 <html>
   <head>
     <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= include_gon(:namespace => 'FundingList') %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
@@ -18,7 +19,7 @@
         </div>
       </div>
     </div>
-    <div class='container' data-pjax-container>
+    <div class='container'>
       <% if flash[:notice] %>
         <div class='alert alert-success unselectable' id='success_alert'>
           <div id='success_alert_text'><%= flash[:notice] %></div>
@@ -32,10 +33,11 @@
       <% end %>
       <%= yield %>
     </div>
-    <div id='footer'>
-      <div id='created_by'>Created by <a href='http://jarredsumner.com'>Jarred Sumner</a>. Source code available on <a href='https://github.com/Jarred-Sumner/FundingList.us'>GitHub</a></div>
+    <footer class='footer' id='footer'>
+      <div id='stats'><%= Company.count %> companies and <%= Round.count %> rounds.
+      <div id='created_by'>Created by <a href='http://jarredsumner.com'>Jarred Sumner</a>. Source code available on <a href='https://github.com/Jarred-Sumner/FundingList.us'>GitHub</a>.</div>
       <div id="not_affiliated">Companies, rounds, and related persons are retrieved from SEC filings. This website is not affiliated with or endorsed by the SEC in any other way.</div>
-    </div>
+    </footer>
 
   </body>
 </html>

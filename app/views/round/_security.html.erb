@@ -1,6 +1,6 @@
 <% unless @round.security.took.empty? %>
   <div id='securities'>
-    <p>The security types were:
+    <strong>The security types were:</strong>
     <ul id='security_types'>
       <% @round.security.took.each do |security| %>
         <li><%= security %></li>

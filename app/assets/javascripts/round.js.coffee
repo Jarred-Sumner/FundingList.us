@@ -1,3 +1,24 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
+//= require accounting.min
+$ ->
+  chart = new Highcharts.Chart
+    chart:
+      renderTo: "chart"
+
+    title:
+      text: "Funding (USD)"
+
+    tooltip:
+      formatter: ->
+        "<strong>#{@point.name}: #{accounting.formatMoney(@point.y)}</strong>"
+    plotOptions:
+      pie:
+        dataLabels:
+          enabled: true
+          formatter: ->
+            "<strong>#{@point.name}: #{accounting.formatMoney(@point.y)}</strong>"
+
+    series: [
+      type: "pie"
+      data: [ ["Raised", FundingList.round.raised], ['Target', FundingList.round.tried_to_raise] ]
+
+    ]

@@ -1,108 +1,56 @@
-#companies
-{
-  margin: 0 auto;
-  text-align: center;
-  #search
-  {
-    margin-top: 15px;
-    padding: 8px;
-    box-shadow: 1px 1px 10px #CCC;
-    width: 65%;
-  }
-  #search:hover
-  {
-    box-shadow: 1px 1px 10px darken(#CCC, 10%);
-    border: 2px outline darken(#CCC, 10%);
-  }
-  #companies_list
-  {
-    list-style: none;
-    .company
-    {
-      margin: 0 auto;
-      margin-top: 5px;
-      background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZhZmFmYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmMGYwZjAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-      border: 1px solid #CCC;
-      box-shadow: 0px 0px 2px #CCC;
-      padding: 15px;
-      width: 60%;
-      text-align: center;
-      a
-      {
-        font-size: 16pt;
-        color: #333;
-      }
-      a:hover
-      {
-        text-decoration: none;
-      }
-    }
-    .company:hover
-    {
-      background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y1ZjVmNSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmMGYwZjAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-      box-shadow: inset 0px 0px 6px darken(#CCC, 10%);
-      cursor: pointer;
-      border: 1px solid darken(#CCC, 10%);
-    }
-    .company:active
-    {
-      background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YyZjJmMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmMGYwZjAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-      box-shadow: inset 0px 0px 18px darken(#CCC, 20%);
-    }
-  }
-}
 #show
 {
   #company
   {
     h1
     {
+      margin-bottom: 0px;
       text-align: center;
     }
-    #overview
+    #update_me_container
     {
       margin: 0 auto;
-      margin-top: 5px;
       padding: 0;
-      text-indent: 50px;
+      text-align: center;
+      width: 100%;
+      #update_me
+      {
+        margin: 0 auto;
+        padding: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 14pt;
+        width: 250px;
+      }
     }
-    #related_people, #rounds, #notify_me
+    #related_people, #rounds, #update_me_container
     {
       display: inline-block;
+      li
+      {
+        background: #FFF;
+      }
     }
     #related_people
     {
       float: right;
-    }
-    #update_me
-    {
-      margin: 0 auto;
-      margin-top: 15px;
-      padding: 10px;
-      padding-left: 20px;
-      padding-right: 20px;
-      font-size: 14pt;
-      width: 250px;
-      position: absolute;
-      right: 25%;
-      left: 25%;
     }
     #rounds
     {
       float: left;
     }
   }
-}
-#update_me_modal
-{
-  .modal-body 
+  #update_me_modal
   {
-    text-align: center;
-    .updated_email_form
+    .modal-body 
     {
-      #update_email_label, #update_email
+      text-align: center;
+      .updated_email_form
       {
-        display: inline-block !important;
+        #update_email_label, #update_email
+        {
+          display: inline-block !important;
+        }
       }
     }
   }

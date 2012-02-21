@@ -32,7 +32,13 @@ gem 'sqlite3'
 gem 'pg'
 
 # Bootstrap
-gem 'bootstrap-sass', '~> 2.0.1'
+gem 'bootstrap-sass'
 
 # Deployment
 gem 'capistrano'
+
+# Charts
+gem "highcharts-rails", "~> 2.1.9"
+
+# Ruby variables in JS
+gem 'gon'
