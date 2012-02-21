@@ -34,7 +34,7 @@
       <%= yield %>
     </div>
     <footer class='footer' id='footer'>
-      <div id='stats'><%= Company.count %> companies and <%= Round.count %> rounds.
+      <div id='stats'><%= number_with_delimiter Company.count, :delimiter => ',' %> companies and <%= number_with_delimiter Round.count, :delimiter => ',' %> rounds.
       <div id='created_by'>Created by <a href='http://jarredsumner.com'>Jarred Sumner</a>. Source code available on <a href='https://github.com/Jarred-Sumner/FundingList.us'>GitHub</a>.</div>
       <div id="not_affiliated">Companies, rounds, and related persons are retrieved from SEC filings. This website is not affiliated with or endorsed by the SEC in any other way.</div>
     </footer>
