@@ -1,7 +1,7 @@
 //= require bootstrap-modal
 //= require accounting.min
 
-start_page = $(document).ready ->
+$(document).ready ->
   change_to_round = (date, raised, company) ->
     console.log(company)
     # While this is O(n), the highest is probably going to be around 16, so it really doesn't matter.
@@ -49,17 +49,5 @@ start_page = $(document).ready ->
         tooltip:
           formatter: ->
             "<strong>Raised: #{accounting.formatMoney(@point.y)}</strong>"
-  $("#update_me_modal").modal()
-  $("#update_me_modal").modal('hide')
-  $("#update_me").click ->
-    $("#update_me_modal").modal("show")
-    $("#update_email").focus()
-  $("#update_me_modal").keyup (evt) ->
-    $("#keep_updated_button").trigger("click") if evt.keyCode == 13
-  $(".hide_modal").click ->
-    $("#update_me_modal").modal('hide')
-  $("#keep_updated_button").click ->
-    $("#success_alert").removeClass("hidden").children("#success_alert_text").text("We'll keep you updated on this company's funding!")
-    $.getJSON location.pathname + '/subscribe.json?&email=' + $("#update_email").val()
-  $("#success_alert").removeClass('hidden') unless $("#success_alert_text").text() == ''
+  
   create_chart()
