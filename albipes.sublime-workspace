@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"raised",
+				"raised_color"
+			],
+			[
 				"rece",
 				"recepient_id"
 			],
@@ -44,37 +48,26 @@
 	"buffers":
 	[
 		{
-			"file": "app/assets/javascripts/round.js.coffee",
+			"file": "app/assets/stylesheets/round.css.scss",
 			"settings":
 			{
-				"buffer_size": 848,
+				"buffer_size": 327,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Gemfile",
+			"settings":
+			{
+				"buffer_size": 574,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/assets/javascripts/application.js.coffee",
+			"file": "app/assets/stylesheets/application.css.scss",
 			"settings":
 			{
-				"buffer_size": 194,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/assets/stylesheets/round.css.scss",
-			"settings":
-			{
-				"buffer_size": 930,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "<%= stylesheet_link_tag 'round' %>\n<div id='show' class='row page'>\n  <title>Round #<%= @round.company.rounds.reverse.index(@round) + 1 %> for <%= @round.company.name %> | FundedList.us</title>\n  <h1>Round #<%= @round.company.rounds.index(@round) + 1 %> for <%= link_to @round.company.name, \"/companies/#{@round.company.id}\" %></h1>\n  <div id='progress'>\n    <div id='total_progress'>\n      <div id='raised'>\n        <div class='highest_investor'>\n\n        </div>\n        <div class='lowest_investor'>\n\n        </div>\n        <div class='average_investor'>\n          <div class='single_investor'>\n          </div>\n          <div class='single_investor'>\n          </div>\n          <div class='single_investor'>\n          </div>\n          <div class='single_investor'>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div id='explanation'>\n      <h2 id='total_invested'>$100,000</h2>\n      \n    </div>\n  </div>\n \n  <h4 id='source'><a href='<%= @round.human_readable_url %>'>Source</a></h4>\n</div>",
-			"file": "app/views/round/show.html.erb",
-			"file_size": 1000,
-			"file_write_time": 129742549455880830,
-			"settings":
-			{
-				"buffer_size": 1007,
+				"buffer_size": 853,
 				"line_ending": "Unix"
 			}
 		},
@@ -82,7 +75,71 @@
 			"file": "app/assets/javascripts/show_companies.js.coffee",
 			"settings":
 			{
-				"buffer_size": 2289,
+				"buffer_size": 2476,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/round.js.coffee",
+			"settings":
+			{
+				"buffer_size": 606,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/round/show.html.erb",
+			"settings":
+			{
+				"buffer_size": 1023,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/companies/index.html.erb",
+			"settings":
+			{
+				"buffer_size": 851,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/layouts/application.html.erb",
+			"settings":
+			{
+				"buffer_size": 1717,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/environments/production.rb",
+			"settings":
+			{
+				"buffer_size": 2033,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/companies/show.html.erb",
+			"settings":
+			{
+				"buffer_size": 597,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/controllers/companies_controller.rb",
+			"settings":
+			{
+				"buffer_size": 1820,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/database.yml",
+			"settings":
+			{
+				"buffer_size": 597,
 				"line_ending": "Unix"
 			}
 		}
@@ -211,32 +268,38 @@
 	},
 	"file_history":
 	[
+		"/E/Programming/Albipes/app/controllers/companies_controller.rb",
 		"/E/Programming/Albipes/app/assets/stylesheets/application.css.scss",
+		"/E/Programming/Albipes/app/assets/javascripts/require.js",
+		"/E/Programming/Albipes/app/assets/stylesheets/home.css.scss",
+		"/E/Programming/Albipes/app/assets/stylesheets/jquery-ui-1.8.17.custom.css",
+		"/E/Programming/Albipes/config/deploy.rb",
+		"/E/Programming/jarredsumner.com/config/deploy.rb",
 		"/E/Programming/Albipes/app/views/layouts/application.html.erb",
 		"/E/Programming/Albipes/db/schema.rb",
+		"/E/Programming/Albipes/app/assets/javascripts/round.js.coffee",
 		"/E/Programming/Albipes/app/assets/javascripts/show_companies.js.coffee",
+		"/E/Programming/Albipes/app/controllers/round_controller.rb",
+		"/E/Programming/Albipes/app/views/companies/show.html.erb",
+		"/E/Programming/Albipes/app/views/companies/index.html.erb",
+		"/E/Programming/Albipes/app/assets/javascripts/application.js.coffee",
 		"/E/Programming/Albipes/app/assets/stylesheets/companies.css.scss",
 		"/E/Programming/Albipes/app/views/companies/_rounds.html.erb",
-		"/E/Programming/Albipes/app/views/companies/index.html.erb",
-		"/E/Programming/Albipes/app/views/companies/show.html.erb",
 		"/E/Programming/Albipes/app/models/company.rb",
 		"/E/Programming/Albipes/app/assets/javascripts/search.js.coffee",
 		"/E/Programming/Albipes/Gemfile",
 		"/E/Programming/Albipes/tmp/cache/sass/1549f1bf9037fb0ac12408c180acc101ef00823a/_linear-gradient.scssc",
 		"/E/Programming/Albipes/app/assets/stylesheets/search.css.scss",
 		"/E/Programming/Albipes/config/application.rb",
-		"/E/Programming/Albipes/app/assets/javascripts/application.js.coffee",
 		"/E/Programming/Albipes/app/views/companies/_related_people.html.erb",
 		"/E/Programming/Albipes/app/assets/javascripts/application.js",
 		"/E/Programming/Albipes/app/views/round/_start_and_finish.html.erb",
-		"/E/Programming/Albipes/app/controllers/companies_controller.rb",
 		"/E/Programming/Albipes/app/views/round/_related_people.html.erb",
 		"/C/Users/Administrator/AppData/Roaming/Sublime Text 2/Packages/Package Control/Package Control.sublime-settings",
 		"/E/Programming/Albipes/app/views/companies/_update_me.html.erb",
 		"/E/Programming/Albipes/app/views/round/show.html.erb",
 		"/E/Programming/Albipes/config/routes.rb",
 		"/E/Programming/Albipes/app/views/companies/search.json.rabl",
-		"/E/Programming/Albipes/app/controllers/round_controller.rb",
 		"/E/Programming/Albipes/app/assets/stylesheets/people.css.scss",
 		"/E/Programming/Albipes/app/views/people/_personal_information.html.erb",
 		"/E/Programming/Albipes/app/views/people/show.html.erb",
@@ -251,7 +314,6 @@
 		"/E/Programming/Albipes/db/migrate/20120218015338_change_other_in_securities_to_text.rb",
 		"/E/Programming/Albipes/app/models/person.rb",
 		"/E/Programming/Albipes/app/views/companies/index.json.rabl",
-		"/E/Programming/Albipes/config/deploy.rb",
 		"/E/Programming/Albipes/lib/tasks/sec.rake",
 		"/E/Programming/Albipes/app/models/email_update.rb",
 		"/E/Programming/Albipes/log/production.log",
@@ -269,11 +331,9 @@
 		"/E/Programming/Albipes/db/migrate/20120218001154_change_raised_and_tried_to_raise_and_investor_count_and_minimum_invested_to_bigint_for_rounds.rb",
 		"/E/Programming/Albipes/config/environments/production.rb",
 		"/E/Programming/Albipes/db/migrate/20120218000952_add_okok_to_round.rb",
-		"/E/Programming/jarredsumner.com/config/deploy.rb",
 		"/E/Programming/jarredsumner.com/config/database.yml",
 		"/E/Programming/Albipes/app/controllers/home_controller.rb",
 		"/E/Programming/Albipes/app/assets/javascripts/handlebars.js",
-		"/E/Programming/Albipes/app/assets/stylesheets/jquery-ui-1.8.17.custom.css",
 		"/E/Programming/Albipes/README.rdoc",
 		"/E/Programming/Albipes/config/environments/development.rb",
 		"/E/Programming/Albipes/Rails.gitignore",
@@ -311,7 +371,6 @@
 		"/E/Programming/Albipes/app/views/company/_convincing.html.erb",
 		"/E/Programming/Albipes/app/views/company/_search.html.erb",
 		"/E/Programming/Albipes/app/views/home/index.html.erb",
-		"/E/Programming/Albipes/app/assets/stylesheets/home.css.scss",
 		"/E/Programming/Albipes/db/migrate/20120209014111_create_companies.rb",
 		"/E/Programming/Albipes/Rakefile",
 		"/E/Programming/Albipes/lib/tasks/sec.rb",
@@ -336,9 +395,7 @@
 		"/E/Programming/Albipes/app/views/round/index.html.erb",
 		"/E/Programming/Albipes/app/assets/javascripts/backbone/models/company.js.coffee",
 		"/E/Programming/Albipes/app/assets/javascripts/backbone/templates/companies/index.jst.ejs",
-		"/E/Programming/Albipes/app/assets/javascripts/backbone/views/companies/company_view.js.coffee",
-		"/E/Programming/Albipes/app/assets/javascripts/backbone/albipes.js.coffee",
-		"/E/Programming/Albipes/app/assets/javascripts/backbone/views/companies/index_view.js.coffee"
+		"/E/Programming/Albipes/app/assets/javascripts/backbone/views/companies/company_view.js.coffee"
 	],
 	"find":
 	{
@@ -420,77 +477,23 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/assets/javascripts/round.js.coffee",
-					"settings":
-					{
-						"buffer_size": 848,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								592,
-								592
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CoffeeScript/Syntaxes/CoffeeScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/assets/javascripts/application.js.coffee",
-					"settings":
-					{
-						"buffer_size": 194,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								194,
-								194
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CoffeeScript/Syntaxes/CoffeeScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "app/assets/stylesheets/round.css.scss",
 					"settings":
 					{
-						"buffer_size": 930,
+						"buffer_size": 327,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								843,
-								843
+								327,
+								327
 							]
 						],
 						"settings":
@@ -504,27 +507,137 @@
 						"zoom_level": 1.0
 					},
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
+				},
 				{
-					"buffer": 3,
-					"file": "app/views/round/show.html.erb",
+					"buffer": 1,
+					"file": "Gemfile",
 					"settings":
 					{
-						"buffer_size": 1007,
+						"buffer_size": 574,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								850,
-								850
+								572,
+								572
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/assets/stylesheets/application.css.scss",
+					"settings":
+					{
+						"buffer_size": 853,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								161,
+								161
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SASS/Syntaxes/SASS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/assets/javascripts/show_companies.js.coffee",
+					"settings":
+					{
+						"buffer_size": 2476,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								706,
+								706
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/Syntaxes/CoffeeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 54.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/assets/javascripts/round.js.coffee",
+					"settings":
+					{
+						"buffer_size": 606,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								298,
+								298
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/Syntaxes/CoffeeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 6,
+			"sheets":
+			[
+				{
+					"buffer": 5,
+					"file": "app/views/round/show.html.erb",
+					"settings":
+					{
+						"buffer_size": 1023,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								288,
+								288
 							]
 						],
 						"settings":
@@ -540,24 +653,164 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "app/assets/javascripts/show_companies.js.coffee",
+					"buffer": 6,
+					"file": "app/views/companies/index.html.erb",
 					"settings":
 					{
-						"buffer_size": 2289,
+						"buffer_size": 851,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								936,
-								936
+								624,
+								624
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CoffeeScript/Syntaxes/CoffeeScript.tmLanguage",
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/views/layouts/application.html.erb",
+					"settings":
+					{
+						"buffer_size": 1717,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								571,
+								571
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "config/environments/production.rb",
+					"settings":
+					{
+						"buffer_size": 2033,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								642,
+								642
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "app/views/companies/show.html.erb",
+					"settings":
+					{
+						"buffer_size": 597,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								597,
+								597
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "app/controllers/companies_controller.rb",
+					"settings":
+					{
+						"buffer_size": 1820,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								87,
+								87
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "config/database.yml",
+					"settings":
+					{
+						"buffer_size": 597,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								594,
+								594
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -619,19 +872,43 @@
 		"selected_items":
 		[
 			[
+				"datab",
+				"config/database.yml"
+			],
+			[
+				"show",
+				"app/views/companies/show.html.erb"
+			],
+			[
+				"index",
+				"app/views/companies/index.html.erb"
+			],
+			[
+				"companies_controller",
+				"app/controllers/companies_controller.rb"
+			],
+			[
 				"application.css",
 				"app/assets/stylesheets/application.css.scss"
 			],
 			[
-				"schema",
-				"db/schema.rb"
+				"produc",
+				"config/environments/production.rb"
 			],
 			[
-				"application.js",
-				"app/assets/javascripts/application.js.coffee"
+				"production.rb",
+				"config/environments/production.rb"
 			],
 			[
-				"application",
+				"round.js.coffee",
+				"app/assets/javascripts/round.js.coffee"
+			],
+			[
+				"deploy.rb",
+				"config/deploy.rb"
+			],
+			[
+				"appi",
 				"app/views/layouts/application.html.erb"
 			],
 			[
@@ -639,19 +916,47 @@
 				"app/assets/javascripts/show_companies.js.coffee"
 			],
 			[
-				"round.js.coffee",
-				"app/assets/javascripts/round.js.coffee"
+				"application.css.css",
+				"app/assets/stylesheets/application.css.scss"
 			],
 			[
-				"show",
-				"app/views/round/show.html.erb"
+				"application.html.erb",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"application",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"schema",
+				"db/schema.rb"
+			],
+			[
+				"show_comp",
+				"app/assets/javascripts/show_companies.js.coffee"
+			],
+			[
+				"show_com",
+				"app/assets/javascripts/show_companies.js.coffee"
+			],
+			[
+				"round_controller",
+				"app/controllers/round_controller.rb"
+			],
+			[
+				"show_companies",
+				"app/assets/javascripts/show_companies.js.coffee"
+			],
+			[
+				"gemfile",
+				"Gemfile"
+			],
+			[
+				"application.js",
+				"app/assets/javascripts/application.js.coffee"
 			],
 			[
 				"inde",
-				"app/views/companies/index.html.erb"
-			],
-			[
-				"index",
 				"app/views/companies/index.html.erb"
 			],
 			[
@@ -675,28 +980,12 @@
 				"app/views/companies/_related_people.html.erb"
 			],
 			[
-				"gemfile",
-				"Gemfile"
-			],
-			[
 				"app",
-				"app/views/layouts/application.html.erb"
-			],
-			[
-				"show_com",
-				"app/assets/javascripts/show_companies.js.coffee"
-			],
-			[
-				"application.html.erb",
 				"app/views/layouts/application.html.erb"
 			],
 			[
 				"_start",
 				"app/views/round/_start_and_finish.html.erb"
-			],
-			[
-				"companies_controller",
-				"app/controllers/companies_controller.rb"
 			],
 			[
 				"_related",
@@ -719,16 +1008,8 @@
 				"app/views/companies/search.json.rabl"
 			],
 			[
-				"round_controller",
-				"app/controllers/round_controller.rb"
-			],
-			[
 				"_update",
 				"app/views/companies/_update_me.html.erb"
-			],
-			[
-				"show_comp",
-				"app/assets/javascripts/show_companies.js.coffee"
 			],
 			[
 				"search",
@@ -737,10 +1018,6 @@
 			[
 				"companies.css",
 				"app/assets/stylesheets/companies.css.scss"
-			],
-			[
-				"show_companies",
-				"app/assets/javascripts/show_companies.js.coffee"
 			],
 			[
 				"_person",
@@ -795,16 +1072,8 @@
 				"app/views/companies/index.json.rabl"
 			],
 			[
-				"deploy.rb",
-				"config/deploy.rb"
-			],
-			[
 				"sec.rake",
 				"lib/tasks/sec.rake"
-			],
-			[
-				"datab",
-				"config/database.yml"
 			],
 			[
 				"companies",
@@ -865,10 +1134,6 @@
 			[
 				"create_roun",
 				"db/migrate/20120209014342_create_rounds.rb"
-			],
-			[
-				"production.rb",
-				"config/environments/production.rb"
 			],
 			[
 				"add_",
@@ -1117,18 +1382,6 @@
 			[
 				"company_controller",
 				"app/controllers/company_controller.rb"
-			],
-			[
-				"compa",
-				"app/models/company.rb"
-			],
-			[
-				"company.js",
-				"app/assets/javascripts/company.js.coffee"
-			],
-			[
-				"devel",
-				"log/development.log"
 			]
 		],
 		"width": 0.0
