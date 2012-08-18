@@ -1,3 +1,6 @@
+CURRENT_QUARTER = 4
+CURRENT_YEAR = 2012
+
 desc 'SEC'
 namespace :sec do
 
@@ -7,7 +10,7 @@ namespace :sec do
       start_index = 1
       start_index = 4 if year == 2008
       (1..4).each do |quarter|
-        break if year == 2012 and quarter > 1
+        break if year == CURRENT_YEAR && quarter == CURRENT_QUARTER
         Company.parse_from_quarterly_filings(year, quarter, false, nil) 
       end
     end
@@ -36,7 +39,7 @@ namespace :sec do
       start_index = 1
       start_index = 4 if year == 2008
       (start_index..4).each do |quarter|
-        break if quarter > 1 and year == 2012
+        break if year == CURRENT_YEAR && quarter == CURRENT_QUARTER
         Company.parse_from_quarterly_filings(year,quarter,false,"#{year}/QTR#{quarter}/form.idx")
       end
     end
