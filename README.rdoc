@@ -2,5 +2,3 @@
 FundingList.us is a website that scrapes SEC's EDGAR database and turns it into something a bit easier to use
 
 This is the production version with a few things redacted (Namely the password for the email)
-
-It's live at http://fundinglist.us
